@@ -18,7 +18,7 @@ filename = args.File
 
 # Read an Image
 img = cv2.imread(args.File)
-src_gray = cv2.cvtColor(img, cv.COLOR_BGR2GRAY)
+src_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 threshold_value = 150
 max_binary_value = 255
@@ -27,4 +27,4 @@ threshold_type = cv2.THRESH_BINARY
 _, dst = cv2.threshold(src_gray, threshold_value, max_binary_value, threshold_type )
 
 # Write an Image
-cv2.imwrite('output.jpg',img)
+cv2.imwrite('output.jpg',dst)
